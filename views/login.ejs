@@ -1,0 +1,176 @@
+ <style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         position: relative;
+     }
+
+     .main_div {
+         display: flex;
+     }
+
+     .box {
+         display: flex;
+         flex-direction: column;
+         margin: auto;
+         margin-top: 8%;
+         width: 420px;
+         height: 300px;
+         padding: 50px;
+         background: rgba(0, 0, 0, 0.678);
+         border-radius: 10px;
+     }
+
+     .box h1 {
+         font-family: "poppins", sans-serif;
+         margin-bottom: 30px;
+         font-size: larger;
+         color: #fff;
+         text-align: center;
+     }
+
+     .box .input-box input {
+         position: relative;
+     }
+
+     .box .input-box input {
+         width: 100%;
+         font-size: 16px;
+         letter-spacing: 1px;
+         margin-bottom: 30px;
+         border: none;
+         border-bottom: 1px solid #fff;
+         color: #fff;
+         background: transparent;
+         outline: none;
+     }
+
+     .box .input-box label {
+         position: absolute;
+         top: -3px;
+         left: 0;
+         letter-spacing: 1px;
+         font-family: "poppins", sans-serif;
+         padding: 0px 0;
+         font-size: 16px;
+         color: #fff;
+         transition: 0.3s ease-in-out;
+     }
+
+     .box .input-box input:valid+label {
+         top: -20px;
+         left: 0;
+         color: #03a9f4;
+         font-size: 12px;
+     }
+
+     .box input[type="submit"] {
+         display: flex;
+         position: absolute;
+         top: 4;
+         right: 0;
+         font-family: "poppins", sans-serif;
+         background: transparent;
+         border: none;
+         background-color: #04befe;
+         outline: none;
+         color: #fff;
+         border: 1px solid #c5d9e2ad;
+         padding: 6px 16px;
+         border-radius: 20px;
+
+         cursor: pointer;
+     }
+
+     .show-password {
+         /*this is for SHOW-PASSWORD   */
+
+         font-family: "Josefin Sans", sans-serif;
+         font-size: 11px;
+         margin-top: -45px;
+         margin-left: 30px;
+         cursor: pointer;
+     }
+
+     input a {
+         display: flex;
+         position: absolute;
+         font-size: 14px;
+         top: 130px;
+         left: -30px;
+         color: rgba(255, 255, 255, 0.589);
+         font-family: "Josefin Sans", sans-serif;
+     }
+
+     #creat-account {
+         margin-left: 8px;
+         top: 5px;
+         left: 130px;
+         color: rgb(255, 255, 255);
+         text-decoration: underline;
+     }
+
+     .password_checker {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: #fff;
+         width: 40%;
+         font-family: 'Poppins', sans-serif;
+     }
+
+     .password_checker span {
+         font-size: small;
+     }
+ </style>
+
+ <body>
+     <div class="main_div">
+         <div class="box">
+             <h1>Login here</h1>
+             <form action="/login" method="POST">
+
+                 <div class="input-box" id="input">
+                     <input type="name" name="email" autocomplete="off" />
+                     <label for="" id="labelx">Email</label>
+                 </div>
+                 <!-- THIS IS PASSWORD INPUT-->
+
+                 <div class="input-box" id="pass">
+                     <input type="password" name="password" autocomplete="on" id="pass2" />
+                     <label for="" id="labely">password</label>
+                 </div>
+
+                 <!-- An element to toggle between password visibility -->
+
+                 <div class="password_checker">
+                     <input type="checkbox" onclick="myFunction()">
+                     <span>
+                         show-password
+                     </span>
+                 </div>
+                 <!--        this is login input-->
+                 <input type="submit" name="submit" value="login" />
+                 <a href="/register" id="creat-account">creat account</a>
+
+             </form>
+         </div>
+     </div>
+     <script>
+         console.log("hello world");
+         //const btn = document.querySelector("#btn");
+         const pass = document.querySelector("#pass");
+
+         function myFunction() {
+             console.log("my function is running")
+             var x = document.getElementById("pass2");
+             if (x.type === "password") {
+                 x.type = "text";
+             } else {
+                 x.type = "password";
+             }
+         }
+     </script>

@@ -1,0 +1,24 @@
+{
+  "web-ui": {
+    "home_page": "complete",
+    "login and register": "not-complete",
+    "Info": "not-complete",
+    "Courses": "not-complete",
+    "blog": "not-complete",
+    "Contact us": "not-complete"
+  },
+
+  "backend": {
+      "database-setting":"not-completed",
+    "homepage connect with data base": "not-completed",
+    "info connect with data base": "not-completed",
+    "blog connect with data base": "not-completed",
+    "contact-us connect with data base": "not-completed",
+    "courses connect with data base": "not-completed",
+    "login and register connect with data base": "not-completed"
+  }
+
+
+
+
+}
